@@ -2,8 +2,19 @@
   --primary: #339eec;
   --sub-500: #525866;
   --soft-200: #e2e4e9;
+  --soft-400: #868c98;
+  --weak-100: #f6f8fa;
+  --blue-lighter: #ebf1ff;
 }
 
 .background-primary {
   background-color: var(--primary);
+}
+
+.bg-weak-100 {
+  background-color: var(--weak-100);
+}
+
+.bg-blue-lighter {
+  background-color: var(--blue-lighter);
 }
