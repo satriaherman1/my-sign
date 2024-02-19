@@ -4,6 +4,10 @@
   font-family: "Inter", sans-serif;
 }
 
+.txt-primary {
+  color: var(--primary);
+}
+
 .text-sub-500 {
   color: var(--sub-500);
 }
@@ -13,6 +17,10 @@
 }
 .text-sm {
   font-size: 14px;
+}
+
+.text-md {
+  font-size: 16px;
 }
 
 .fw-semibold {
