@@ -7,6 +7,14 @@
 .text-sub-500 {
   color: var(--sub-500);
 }
+
+.text-soft-400 {
+  color: var(--soft-400);
+}
 .text-sm {
   font-size: 14px;
+}
+
+.fw-semibold {
+  font-weight: 600;
 }
