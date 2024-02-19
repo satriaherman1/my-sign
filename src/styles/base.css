@@ -1,2 +1,15 @@
 @import url("utils/colors.css");
 @import url("utils/fonts.css");
+
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
