@@ -1,3 +1,9 @@
 :root {
   --primary: #339eec;
+  --sub-500: #525866;
+  --soft-200: #e2e4e9;
+}
+
+.background-primary {
+  background-color: var(--primary);
 }

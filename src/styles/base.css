@@ -1,5 +1,6 @@
 @import url("utils/colors.css");
 @import url("utils/fonts.css");
+@import url("utils/button.css");
 
 ul {
   padding-left: 0;
@@ -12,4 +13,13 @@ li {
 a {
   text-decoration: none;
   color: unset;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden;
 }

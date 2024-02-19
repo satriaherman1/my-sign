@@ -1,0 +1,24 @@
+.button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button-outlined {
+  border: 1px solid;
+  border-color: #e2e4e9;
+  border-radius: 8px;
+  background-color: transparent;
+}

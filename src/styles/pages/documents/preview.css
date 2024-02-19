@@ -1,0 +1,14 @@
+.preview-document-container {
+  border: 1px solid var(--soft-200);
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.preview-document-container .icon-box {
+  padding: 10px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--soft-200);
+  width: fit-content;
+  height: fit-content;
+}
