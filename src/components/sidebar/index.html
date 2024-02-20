@@ -1,21 +1,208 @@
-<aside class="bg-weak-100 h-full p-3">
-  <div class="d-flex justify-content-between">
-    <img src="/src/assets/img/logo.svg" width="120px" />
-
-    <button class="arrow-down">
-      <img src="/src/assets/icons/arrow-down.svg" />
-    </button>
+<div class="sidebar vh-100 d-flex flex-column">
+  <div
+    class="col h-100 d-flex flex-column align-content-around justify-content-between"
+  >
+    <div class="col">
+      <header class="d-flex justify-content-between my-4 px-4">
+        <img src="/src/assets/img/logo.svg" width="80px" />
+        <button
+          class="outlined-close-button d-flex justify-content-center align-items-center"
+        >
+          <img
+            src="/src/assets/icons/arrow-down.svg"
+            width="15px"
+            height="15px"
+          />
+        </button>
+      </header>
+      <hr class="my-3" style="margin: 0 24px" />
+      <span class="text-soft-400 mb-1" style="font-size: 13px; margin: 0 24px"
+        >MAIN</span
+      >
+      <div class="sidebar-list">
+        <a class="text-link d-flex align-items-center active" href=""
+          ><div class="sidebar-item background-primary active"></div>
+          <div
+            class="sidebar-nav bg-weak-100 d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex">
+              <img
+                class="sidebar-icon"
+                src="/src/assets/icons/dashboard-icon.svg"
+                alt=""
+              />
+              <span class="ms-2 text-sm">Dashboard</span>
+            </div>
+            <div class="d-flex">
+              <img
+                class=""
+                src="/src/assets/icons/arrow-right-s-line.svg"
+                alt=""
+              />
+            </div></div
+        ></a>
+        <a class="text-link d-flex align-items-center" href=""
+          ><div class="sidebar-item background-primary"></div>
+          <div
+            class="sidebar-nav d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                class="sidebar-icon"
+                src="/src/assets/icons/file-cloud-line.svg"
+                alt=""
+              />
+              <span class="ms-2 text-sm text-sub-500">Document</span>
+            </div>
+            <div class="d-flex">
+              <!-- <img src="/src/assets/icons/arrow-right-s-line.svg" alt="" /> -->
+            </div>
+          </div></a
+        >
+        <a class="text-link d-flex align-items-center" href=""
+          ><div class="sidebar-item background-primary"></div>
+          <div
+            class="sidebar-nav d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                class="sidebar-icon"
+                src="/src/assets/icons/star-icon.svg"
+                alt=""
+              />
+              <span class="ms-2 text-sm text-sub-500">templates</span>
+            </div>
+            <div class="d-flex">
+              <!-- <img src="/src/assets/icons/arrow-right-s-line.svg" alt="" /> -->
+            </div>
+          </div></a
+        >
+        <a class="text-link d-flex align-items-center" href=""
+          ><div class="sidebar-item background-primary"></div>
+          <div
+            class="sidebar-nav d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center">
+              <img
+                class="sidebar-icon"
+                src="/src/assets/icons/group-line.svg"
+                alt=""
+              />
+              <span class="ms-2 text-sm text-sub-500">Groups</span>
+            </div>
+            <div class="d-flex">
+              <!-- <img src="/src/assets/icons/arrow-right-s-line.svg" alt="" /> -->
+            </div>
+          </div></a
+        >
+      </div>
+    </div>
+    <div class="bottom">
+      <a class="text-link d-flex align-items-center" href=""
+        ><div class="sidebar-item background-primary"></div>
+        <div
+          class="sidebar-nav d-flex align-items-center justify-content-between"
+        >
+          <div class="d-flex align-items-center">
+            <img
+              class="sidebar-icon"
+              src="/src/assets/icons/setting-icon.svg"
+              alt=""
+            />
+            <span class="ms-2 text-sm text-sub-500">Settings</span>
+          </div>
+          <div class="d-flex">
+            <!-- <img src="/src/assets/icons/arrow-right-s-line.svg" alt="" /> -->
+          </div>
+        </div></a
+      >
+      <a class="text-link d-flex align-items-center" href=""
+        ><div class="sidebar-item background-primary"></div>
+        <div
+          class="sidebar-nav d-flex align-items-center justify-content-between"
+        >
+          <div class="d-flex align-items-center">
+            <img
+              class="sidebar-icon"
+              src="/src/assets/icons/headphone-icon.svg"
+              alt=""
+            />
+            <span class="ms-2 text-sm text-sub-500">Support</span>
+          </div>
+          <div class="d-flex">
+            <!-- <img src="/src/assets/icons/arrow-right-s-line.svg" alt="" /> -->
+          </div>
+        </div></a
+      >
+      <hr class="my-4" style="margin: 24px" />
+      <div
+        class="d-flex align-items-center justify-content-between"
+        style="margin: 24px"
+      >
+        <img src="/src/assets/img/shopia.svg" width="40px" alt="" />
+        <div class="d-flex flex-column h-auto">
+          <span class="text-sm"
+            >Sofia Williams
+            <img
+              style="position: absolute"
+              src="/src/assets/icons/verified-fill.svg"
+              alt=""
+          /></span>
+          <span class="text-sub-500" style="font-size: 12px"
+            >sophia@alignui.com</span
+          >
+        </div>
+        <div class="">
+          <img class="" src="/src/assets/icons/arrow-right-s-line.svg" alt="" />
+        </div>
+      </div>
+    </div>
   </div>
-</aside>
+</div>
 
 <!-- styling -->
 <style>
-  #sidebar aside {
+  .sidebar {
+    padding: 8px 0;
     width: 100%;
+
+    border-right: 0.1px solid rgb(214, 211, 211);
   }
-  #sidebar .arrow-down {
+  .text-link {
+    margin: 6px 0;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  .active {
+    opacity: 1 !important;
+  }
+  .sidebar-item {
+    opacity: 0;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    width: 5px;
+    height: 25px;
+    margin-right: 6%;
+  }
+  .sidebar-nav {
+    width: 100%;
     border-radius: 8px;
+    padding: 8px;
+    margin-right: 9%;
+  }
+  .sidebar-icon {
+    margin: 0 5%;
+    width: 19px;
+    height: 19px;
+    object-fit: contain;
+  }
+
+  .outlined-close-button {
+    border-radius: 6px;
     background-color: transparent;
-    outline: none;
+    border: 2px solid #e2e4e9;
+    height: 24px;
+    width: 24px;
   }
 </style>
