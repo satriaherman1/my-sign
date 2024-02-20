@@ -16,6 +16,11 @@
   color: white;
   border-radius: 8px;
 }
+.button-primary-base {
+  background-color: var(--primary-base);
+  color: white;
+  border-radius: 8px;
+}
 
 .button-outlined {
   border: 1px solid;
@@ -37,6 +42,19 @@
   border-radius: 8px;
   background-color: transparent;
   padding: 8px 14px;
+}
+.button-circle {
+  border: 1px solid;
+  border-color: #e2e4e9;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.button-primary-unline {
+  border: 0;
+  background-color: var(--primary);
+  border-radius: 10px;
+  color: white;
 }
 
 .border-r {

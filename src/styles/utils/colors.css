@@ -1,16 +1,19 @@
 :root {
   --primary: #339eec;
+  --primary-base: #375dfb;
   --sub-500: #525866;
   --soft-200: #e2e4e9;
   --soft-400: #868c98;
   --weak-100: #f6f8fa;
   --green-lighter: #effaf6;
   --blue-lighter: #ebf1ff;
-
 }
 
 .background-primary {
   background-color: var(--primary);
+}
+.background-primary-base {
+  background-color: var(--primary-base);
 }
 
 .bg-weak-100 {
