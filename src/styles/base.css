@@ -4,6 +4,10 @@
 @import url("utils/chart.css");
 @import url("utils/tabs.css");
 
+.h-full {
+  height: 100vh;
+}
+
 ul {
   padding-left: 0;
 }
