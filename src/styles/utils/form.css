@@ -10,3 +10,19 @@
   border-color: var(--primary);
 }
 
+.sign-select {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  outline: none;
+  border: 2px solid var(--soft-200);
+  transition: 0.2s;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background-image: url("/src/assets/icons/arrow-down-s-line.svg");
+  background-repeat: no-repeat;
+  background-position: 99% center;
+}
+

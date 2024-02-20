@@ -4,6 +4,7 @@
   --soft-200: #e2e4e9;
   --soft-400: #868c98;
   --weak-100: #f6f8fa;
+  --green-lighter: #effaf6;
   --blue-lighter: #ebf1ff;
 
 }
@@ -18,4 +19,8 @@
 
 .bg-blue-lighter {
   background-color: var(--blue-lighter);
+}
+
+.bg-green-lighter {
+  background-color: var(--green-lighter);
 }
