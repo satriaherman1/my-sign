@@ -29,6 +29,9 @@
 .text-lg {
   font-size: 18px;
 }
+.text-s {
+  font-size: 12px;
+}
 
 .fw-semibold {
   font-weight: 600;
