@@ -1,0 +1,12 @@
+.sign-input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  outline: none;
+  border: 2px solid var(--soft-200);
+  transition: 0.2s;
+}
+
+.sign-input:focus {
+  border-color: var(--primary);
+}
+

@@ -1,0 +1,26 @@
+.send-and-review-document-container {
+  border: 1px solid var(--soft-200);
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.send-and-review-document-container .icon-box {
+  padding: 10px 12px;
+  border-radius: 100px;
+  border: 1px solid var(--soft-200);
+  width: fit-content;
+  height: fit-content;
+}
+
+.sign-alert {
+  background-color: var(--weak-100);
+  padding: 20px 15px;
+  border-radius: 12px;
+}
+
+.sign-alert > div {
+  width: fit-content;
+  border-radius: 100px;
+  height: fit-content;
+}
