@@ -2,6 +2,10 @@
 @import url("utils/fonts.css");
 @import url("utils/button.css");
 
+.h-full {
+  height: 100vh;
+}
+
 ul {
   padding-left: 0;
 }
