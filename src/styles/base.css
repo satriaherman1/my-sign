@@ -1,6 +1,7 @@
 @import url("utils/colors.css");
 @import url("utils/fonts.css");
 @import url("utils/button.css");
+@import url("utils/chart.css");
 
 .h-full {
   height: 100vh;
