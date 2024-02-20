@@ -3,6 +3,10 @@
 @import url("utils/button.css");
 @import url("utils/chart.css");
 
+.h-full {
+  height: 100vh;
+}
+
 ul {
   padding-left: 0;
 }
