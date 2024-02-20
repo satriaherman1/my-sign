@@ -13,14 +13,182 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/pages/settings/general.css" />
   </head>
-  <body>
+  <body class="settings">
     <div class="row">
       <div class="col-md-2">
         <div id="sidebar"></div>
       </div>
       <div class="col-md">
         <div id="dashboardHeader" class="px-3"></div>
+
+        <div class="row">
+          <div class="col-md-3">
+            <div class="mt-4 border-r pe-3">
+              <h4 class="text-lg font-bold mb-0">Settings</h4>
+              <span class="text-sm text-sub-500"
+                >Choose between categories</span
+              >
+
+              <hr />
+
+              <div class="d-flex flex-column gap-2">
+                <a
+                  href="/settings/general.html"
+                  class="w-100 px-3 py-2 menu-active"
+                >
+                  <div class="d-flex gap-2 align-items-center w-100">
+                    <img src="/src/assets/icons/setting-icon.svg" />
+                    <span class="fw-semibold">General</span>
+
+                    <span class="menu-arrow">
+                      <img src="/src/assets/icons/arrow-right.svg" />
+                    </span>
+                  </div>
+                </a>
+                <a href="/settings/general.html" class="w-100 px-3 py-2">
+                  <div class="d-flex gap-2 align-items-center w-100">
+                    <img src="/src/assets/icons/profile.svg" />
+                    <span>Profile</span>
+                  </div>
+                </a>
+                <a href="/settings/general.html" class="w-100 px-3 py-2">
+                  <div class="d-flex gap-2 align-items-center w-100">
+                    <img src="/src/assets/icons/temporary-groups.svg" />
+                    <span>Temporary Grups</span>
+                  </div>
+                </a>
+                <a href="/settings/general.html" class="w-100 px-3 py-2">
+                  <div class="d-flex gap-2 align-items-center w-100">
+                    <img src="/src/assets/icons/notification-05-line.svg" />
+                    <span>Notifications</span>
+                  </div>
+                </a>
+                <a href="/settings/general.html" class="w-100 px-3 py-2">
+                  <div class="d-flex gap-2 align-items-center w-100">
+                    <img src="/src/assets/icons/apps-2-line.svg" />
+                    <span>categories</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="p-4">
+              <section class="d-flex justify-content-between general-step">
+                <div>
+                  <div class="fw-semibold">Change Password</div>
+                  <div class="text-sm">
+                    Update password for enhanced account security.
+                  </div>
+                </div>
+
+                <button class="button button-outlined">Change Password</button>
+              </section>
+              <section class="d-flex justify-content-between general-step">
+                <div>
+                  <div class="fw-semibold">Backup Codes</div>
+                  <div class="text-sm">
+                    Create and store new backup codes for use in the event of
+                    losing access to your authentication app.
+                  </div>
+                </div>
+
+                <button class="button button-outlined">Generate Codes</button>
+              </section>
+              <section class="d-flex justify-content-between general-step">
+                <div>
+                  <div class="fw-semibold">Two-factor Authentication</div>
+                  <div class="text-sm">
+                    Add an extra layer of protection to your account.
+                  </div>
+                </div>
+
+                <button class="button button-outlined">
+                  Manage Authentication
+                </button>
+              </section>
+              <section
+                class="d-flex justify-content-between general-step border-0"
+              >
+                <div>
+                  <div class="fw-semibold">Active Sessions</div>
+                  <div class="text-sm">
+                    Monitor and manage all your active sessions.
+                  </div>
+                </div>
+
+                <button class="button button-outlined-danger">
+                  Logout All Sessions
+                </button>
+              </section>
+
+              <table id="example" class="row-border mt-3" style="width: 100%">
+                <thead>
+                  <tr class="fw-normal bg-weak-100 px-3">
+                    <td class="px-3 py-2">Browser</td>
+                    <td class="px-3 py-2">Location</td>
+                    <td class="px-3 py-2">Most Recent activity</td>
+                    <td class="px-3 py-2">IP Address</td>
+                    <td class="px-3 py-2"></td>
+                  </tr>
+                </thead>
+                <tbody class="text-sm">
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex">
+                        <img src="/src/assets/icons/firefox-line.svg" />
+                        <span class="ms-3">Mozilla Firefox</span>
+                      </div>
+                    </td>
+                    <td class="p-3">Québec, Canada</td>
+                    <td class="p-3">Current Session</td>
+                    <td class="p-3">224.0.1.1</td>
+                    <td class="p-3">
+                      <button class="bg-transparent border-0">
+                        <img src="/src/assets/icons/close.svg" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex">
+                        <img src="/src/assets/icons/firefox-line.svg" />
+                        <span class="ms-3">Mozilla Firefox</span>
+                      </div>
+                    </td>
+                    <td class="p-3">Québec, Canada</td>
+                    <td class="p-3">Current Session</td>
+                    <td class="p-3">224.0.1.1</td>
+                    <td class="p-3">
+                      <button class="bg-transparent border-0">
+                        <img src="/src/assets/icons/close.svg" />
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">
+                      <div class="d-flex">
+                        <img src="/src/assets/icons/firefox-line.svg" />
+                        <span class="ms-3">Mozilla Firefox</span>
+                      </div>
+                    </td>
+                    <td class="p-3">Québec, Canada</td>
+                    <td class="p-3">Current Session</td>
+                    <td class="p-3">224.0.1.1</td>
+                    <td class="p-3">
+                      <button class="bg-transparent border-0">
+                        <img src="/src/assets/icons/close.svg" />
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

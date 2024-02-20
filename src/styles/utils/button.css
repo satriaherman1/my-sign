@@ -23,6 +23,13 @@
   border-radius: 8px;
   background-color: transparent;
 }
+.button-outlined-danger {
+  border: 1px solid;
+  border-color: var(--red-base);
+  color: var(--red-base);
+  border-radius: 8px;
+  background-color: transparent;
+}
 
 .button-outlined-rounded-lg {
   border: 1px solid;
