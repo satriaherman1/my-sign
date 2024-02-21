@@ -94,4 +94,13 @@
   border-radius: 8px;
   background-color: var(--soft-400);
 
+
+}
+
+.button-outlined-primary {
+  border: 1px solid var(--primary-base);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--primary-base);
+
 }
