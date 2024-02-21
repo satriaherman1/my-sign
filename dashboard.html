@@ -8,39 +8,21 @@
     <script src="/src/components/simple-header/index.html"></script>
     <link rel="stylesheet" href="/src/styles/base.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/src/styles/utils/form.css" />
     <!-- dataTable css -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
-    <!-- sidebar-js -->
-    <script src="/src/scripts/components/siderbar.js"></script>
   </head>
   <body>
-    <div class="d-flex" style="width: 100%">
-      <aside class="sidebar vh-100 d-flex flex-column" id="sidebar"></aside>
-      <div class="" style="padding: 0 32px; width: 86%">
-        <!-- start nav -->
-        <nav class="d-flex align-items-center justify-content-between" style="height: 80px">
-          <div class="d-flex">
-            <img src="/src/assets/img/shopia.svg" width="40px" alt="" />
-            <div class="ms-3 d-flex flex-column h-auto">
-              <span class="text-md fw-medium text-black">Sofia Williams <img src="/src/assets/icons/verified-fill.svg" alt="" /></span>
-              <span class="text-sub-500 text-sm">Welcome back to MySign 👋🏻</span>
-            </div>
-          </div>
-          <div class="d-flex align-items-center gap-3">
-            <div class="d-flex justify-content-center align-items-center" style="width: 40px; height: 40px">
-              <img src="/src/assets/icons/search-icon.svg" alt="" />
-            </div>
-            <div class="d-flex justify-content-center align-items-center" style="width: 40px; height: 40px">
-              <img src="/src/assets/icons/nontif-icon.svg" alt="" />
-            </div>
-            <button class="button-outlined d-flex gap-2" style="padding: 6px 10px"><span class="text-sm">English</span> <img src="/src/assets/icons/arrow-down.svg" alt="" /></button>
-            <button class="button button-primary d-flex align-items-center gap-2" style="padding: 6px 15px 6px 10px"><img src="/src/assets/icons/edit-2-line.svg" alt="" /><span class="text-sm">Sign Document</span></button>
-          </div>
-        </nav>
-        <!-- end nav -->
+    <div class="row">
+      <div class="col-md-2 col-12">
+        <div id="sidebar"></div>
+      </div>
 
+      <div class="col-md vh-100 overflow-y-scroll pb-3">
+        <div id="dashboardHeader" class="px-3"></div>
         <!-- start overview -->
 
         <div class="d-flex mt-1 gap-4">
@@ -116,7 +98,6 @@
               </div>
 
               <div class="form-outline d-flex align-items-center" data-mdb-input-init style="width: 338px">
-                <img class="position-absolute ms-2 ps-1" src="/src/assets/icons/search-icon.svg" width="20px" alt="" />
                 <input type="search" id="" class="form-control form-search" placeholder="      Search for documents" aria-label="Search" />
               </div>
             </div>
@@ -142,7 +123,10 @@
                   </td>
                   <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
                   <td>
-                    <button class="button-outlined d-flex align-items-center"><img src="/src/assets/icons/time-fill.svg" alt="" /> <span class="p-1 text-s text-sub-500">0/1</span></button>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
                   </td>
                   <td class="">
                     <div class="d-flex gap-3">
@@ -165,7 +149,10 @@
                   </td>
                   <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
                   <td>
-                    <button class="button-outlined d-flex align-items-center"><img src="/src/assets/icons/time-fill.svg" alt="" /> <span class="p-1 text-s text-sub-500">0/1</span></button>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
                   </td>
                   <td class="">
                     <div class="d-flex gap-3">
@@ -188,7 +175,10 @@
                   </td>
                   <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
                   <td>
-                    <button class="button-outlined d-flex align-items-center"><img src="/src/assets/icons/check-mark.svg" alt="" /> <span class="p-1 text-s text-sub-500">1/1</span></button>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/check-mark.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">1/1</span>
+                    </button>
                   </td>
                   <td class="">
                     <div class="d-flex gap-3">
@@ -211,7 +201,10 @@
                   </td>
                   <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
                   <td>
-                    <button class="button-outlined d-flex align-items-center"><img src="/src/assets/icons/check-mark.svg" alt="" /> <span class="p-1 text-s text-sub-500">1/1</span></button>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/check-mark.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">1/1</span>
+                    </button>
                   </td>
                   <td class="">
                     <div class="d-flex gap-3">
@@ -229,6 +222,7 @@
         <!-- end table -->
       </div>
     </div>
+
     <style>
       input,
       input::-webkit-input-placeholder {
@@ -256,7 +250,27 @@
         border-bottom: none !important;
       }
 
+      .text-link {
+        margin: 6px 0;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+      }
+      .active {
+        opacity: 1 !important;
+      }
+
+      .outlined-close-button {
+        border-radius: 6px;
+        background-color: transparent;
+        border: 2px solid #e2e4e9;
+        height: 24px;
+        width: 24px;
+      }
     </style>
+
+    <script src="/src/scripts/components/siderbar.js"></script>
+    <script src="/src/scripts/components/dashboard-header.js"></script>
     <script>
       $(document).ready(function () {
         $("#example").DataTable({
@@ -270,6 +284,7 @@
         });
       });
     </script>
+
     <script src="/src/scripts/utils/circular-chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>

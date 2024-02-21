@@ -15,6 +15,10 @@
 .text-soft-400 {
   color: var(--soft-400);
 }
+
+.text-xs {
+  font-size: 12px;
+}
 .text-sm {
   font-size: 14px;
 }

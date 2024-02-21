@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/pages/settings/general.css" />
+    <link rel="stylesheet" href="/src/styles/pages/groups/add-groups.css" />
+    <link rel="stylesheet" href="/src/styles/utils/form.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+  </head>
+  <body class="settings">
+    <div class="row">
+      <div class="col-md-2">
+        <div id="sidebar"></div>
+      </div>
+      <div class="col-md vh-100 overflow-y-scroll">
+        <div id="dashboardHeader" class="px-3"></div>
+
+        <div
+          class="d-flex justify-content-between align-items-center w-full border-bottom"
+          style="height: 75px"
+        >
+          <div class="d-flex gap-3 h-auto">
+            <button class="back-button">
+              <img src="/src/assets/icons/arrow-left-s-line.svg" alt="" />
+            </button>
+            <section>
+              <div class="text-md fw-medium text-black">Temporary Groups</div>
+              <div class="text-sub-500 text-sm">
+                Display all the Temporary Groups
+              </div>
+            </section>
+          </div>
+          <div class="d-flex gap-2">
+            <input
+              type="search"
+              id=""
+              class="form-control form-search"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table
+            id="example"
+            class="row-border mt-3 text-sub-500"
+            style="width: 100%"
+          >
+            <thead>
+              <tr class="text-sub-500">
+                <th>Group Name</th>
+
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody class="text-sm">
+              <tr>
+                <td>
+                  <div class="d-flex fw-bold">Investment</div>
+                </td>
+
+                <td class="">
+                  <div class="d-flex gap-3">
+                    <button class="button-outlined-md">
+                      <img src="/src/assets/icons/edit-icon.svg" alt="" /><span
+                        class="ms-2 text-sm"
+                        >Edit</span
+                      >
+                    </button>
+
+                    <button class="button-outlined-md">
+                      <img src="/src/assets/icons/trash.svg" alt="" /><span
+                        class="ms-2 text-sm"
+                        >Delete</span
+                      >
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex fw-bold">Investment</div>
+                </td>
+
+                <td class="">
+                  <div class="d-flex gap-3">
+                    <button class="button-outlined-md">
+                      <img src="/src/assets/icons/edit-icon.svg" alt="" /><span
+                        class="ms-2 text-sm"
+                        >Edit</span
+                      >
+                    </button>
+
+                    <button class="button-outlined-md">
+                      <img src="/src/assets/icons/trash.svg" alt="" /><span
+                        class="ms-2 text-sm"
+                        >Delete</span
+                      >
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="d-flex fw-bold">Investment</div>
+                </td>
+
+                <td class="">
+                  <div class="d-flex gap-3">
+                    <button class="button-outlined-md">
+                      <img src="/src/assets/icons/edit-icon.svg" alt="" /><span
+                        class="ms-2 text-sm"
+                        >Edit</span
+                      >
+                    </button>
+
+                    <button class="button-outlined-md">
+                      <img src="/src/assets/icons/trash.svg" alt="" /><span
+                        class="ms-2 text-sm"
+                        >Delete</span
+                      >
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          class="w-full h-25 d-flex justify-content-between align-items-center mt-1"
+        >
+          <span class="text-sm text-sub-500">Page 1 of 1</span>
+          <button
+            class="button-outlined d-flex align-items-center"
+            style="padding: 5px 13px"
+          >
+            <span class="text-sm me-1">7/page </span
+            ><img src="/src/assets/icons/arrow-down.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .back-button {
+        background: none;
+        border-radius: 100px;
+        padding: 9px;
+        border: 2px solid var(--soft-200);
+        height: fit-content;
+      }
+
+      .step-box {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 15px;
+        border: 2px solid var(--soft-200);
+        border-radius: 12px;
+      }
+
+      thead th {
+        background-color: #f6f8fa;
+        &:first-child {
+          border-radius: 6px 0 0 6px;
+        }
+        &:last-child {
+          border-radius: 0 6px 6px 0;
+        }
+      }
+      table thead th {
+        height: 5px !important;
+        border-bottom: none !important;
+        font-weight: 400 !important;
+        font-size: 14px;
+      }
+      table tbody td {
+        padding: 14px 10px !important;
+      }
+      table tbody td {
+        border-bottom: none !important;
+      }
+    </style>
+    <!-- bootstrap js -->
+    <script src="/src/scripts/components/siderbar.js"></script>
+    <script src="/src/scripts/components/dashboard-header.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#example").DataTable({
+          paging: false,
+          ordering: true,
+          info: false,
+          lengthChange: false,
+
+          searching: false,
+          dom: '<"row view-filter"<"col-sm-12"<"pull-left"l><"pull-right"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/pages/settings/general.css" />
+    <link rel="stylesheet" href="/src/styles/utils/form.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+    <style>
+      .profile-form {
+        display: flex;
+        margin-top: 12px;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .profile-form > div:nth-child(n + 1):nth-child(-n + 4) {
+        width: 100%;
+        flex-basis: 48%;
+      }
+
+      .profile-form > div:nth-child(n + 5) {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="settings">
+    <div class="row">
+      <div class="col-md-2">
+        <div id="sidebar"></div>
+      </div>
+      <div class="col-md vh-100 overflow-y-scroll">
+        <div id="dashboardHeader" class="px-3"></div>
+
+        <div
+          class="d-flex justify-content-between align-items-center w-full border-bottom"
+          style="height: 75px"
+        >
+          <div class="d-flex flex-column h-auto">
+            <span class="text-md fw-medium text-black">Your Documents</span>
+            <span class="text-sub-500 text-sm">Display All the document</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button
+              class="button button-sm button-outlined"
+              onclick="window.location.href = '/groups/categories.html'"
+            >
+              <img src="/src/assets/icons/list-unordered.svg" />
+              <span class="ms-2">Categories</span>
+            </button>
+            <button
+              class="button button-sm button-outlined"
+              onclick="window.location.href = '/groups/temporary-groups.html'"
+            >
+              <img src="/src/assets/icons/user-voice-line.svg" />
+              <span class="ms-2">Temporary groups</span>
+            </button>
+            <button
+              class="button button-primary-base background-primary-base d-flex align-items-center gap-2"
+              style="padding: 7px 15px 7px 10px"
+              onclick="window.location.href = '/groups/add-groups.html'"
+            >
+              <img src="/src/assets/icons/add-line-white.svg" alt="" /><span
+                class="text-sm"
+                >Add Group</span
+              >
+            </button>
+          </div>
+        </div>
+
+        <!-- start table -->
+        <div class="d-flex mt-3">
+          <div class="flex-fill overview d-flex flex-column" style="padding: 0">
+            <div
+              class="d-flex align-items-center justify-content-between align-items-center"
+              style="height: 50px"
+            >
+              <div class="menu">
+                <div class="tabs">
+                  <input type="radio" name="tabs" id="tab1" checked />
+                  <label for="tab1" class="tab">All</label>
+                  <input type="radio" name="tabs" id="tab2" />
+                  <label for="tab2" class="tab">Active</label>
+                  <input type="radio" name="tabs" id="tab3" />
+                  <label for="tab3" class="tab">Deactive</label>
+                  <span class="selector"></span>
+                </div>
+              </div>
+              <div
+                class="form-outline d-flex align-items-center"
+                data-mdb-input-init
+                style="width: 338px"
+              >
+                <input
+                  type="search"
+                  id=""
+                  class="form-control form-search"
+                  placeholder="Search for documents"
+                  aria-label="Search"
+                />
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table
+                id="example"
+                class="row-border mt-3 text-sub-500"
+                style="width: 100%"
+              >
+                <thead>
+                  <tr class="text-sub-500">
+                    <th>Group Name</th>
+                    <th>Status</th>
+
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody class="text-sm">
+                  <tr>
+                    <td>
+                      <div class="d-flex fw-bold">Investment</div>
+                    </td>
+                    <td>
+                      <button class="button-outlined d-flex align-items-center">
+                        <img src="/src/assets/icons/time-fill.svg" alt="" />
+                        <span class="p-1 text-s text-sub-500">0/1</span>
+                      </button>
+                    </td>
+
+                    <td class="">
+                      <div class="d-flex gap-3">
+                        <button class="button-outlined-md">
+                          <img src="/src/assets/icons/trash.svg" alt="" /><span
+                            class="ms-2 text-sm"
+                            >Delete</span
+                          >
+                        </button>
+
+                        <button class="button-outlined-md">
+                          <img
+                            src="/src/assets/icons/edit-icon.svg"
+                            alt=""
+                          /><span class="ms-2 text-sm">Edit</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex fw-bold">Investment</div>
+                    </td>
+                    <td>
+                      <button class="button-outlined d-flex align-items-center">
+                        <img src="/src/assets/icons/time-fill.svg" alt="" />
+                        <span class="p-1 text-s text-sub-500">0/1</span>
+                      </button>
+                    </td>
+
+                    <td class="">
+                      <div class="d-flex gap-3">
+                        <button class="button-outlined-md">
+                          <img src="/src/assets/icons/trash.svg" alt="" /><span
+                            class="ms-2 text-sm"
+                            >Delete</span
+                          >
+                        </button>
+
+                        <button class="button-outlined-md">
+                          <img
+                            src="/src/assets/icons/edit-icon.svg"
+                            alt=""
+                          /><span class="ms-2 text-sm">Edit</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex fw-bold">Investment</div>
+                    </td>
+                    <td>
+                      <button class="button-outlined d-flex align-items-center">
+                        <img src="/src/assets/icons/time-fill.svg" alt="" />
+                        <span class="p-1 text-s text-sub-500">0/1</span>
+                      </button>
+                    </td>
+
+                    <td class="">
+                      <div class="d-flex gap-3">
+                        <button class="button-outlined-md">
+                          <img src="/src/assets/icons/trash.svg" alt="" /><span
+                            class="ms-2 text-sm"
+                            >Delete</span
+                          >
+                        </button>
+
+                        <button class="button-outlined-md">
+                          <img
+                            src="/src/assets/icons/edit-icon.svg"
+                            alt=""
+                          /><span class="ms-2 text-sm">Edit</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex fw-bold">Investment</div>
+                    </td>
+                    <td>
+                      <button class="button-outlined d-flex align-items-center">
+                        <img src="/src/assets/icons/time-fill.svg" alt="" />
+                        <span class="p-1 text-s text-sub-500">0/1</span>
+                      </button>
+                    </td>
+
+                    <td class="">
+                      <div class="d-flex gap-3">
+                        <button class="button-outlined-md">
+                          <img src="/src/assets/icons/trash.svg" alt="" /><span
+                            class="ms-2 text-sm"
+                            >Delete</span
+                          >
+                        </button>
+
+                        <button class="button-outlined-md">
+                          <img
+                            src="/src/assets/icons/edit-icon.svg"
+                            alt=""
+                          /><span class="ms-2 text-sm">Edit</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex fw-bold">Investment</div>
+                    </td>
+                    <td>
+                      <button class="button-outlined d-flex align-items-center">
+                        <img src="/src/assets/icons/time-fill.svg" alt="" />
+                        <span class="p-1 text-s text-sub-500">0/1</span>
+                      </button>
+                    </td>
+
+                    <td class="">
+                      <div class="d-flex gap-3">
+                        <button class="button-outlined-md">
+                          <img src="/src/assets/icons/trash.svg" alt="" /><span
+                            class="ms-2 text-sm"
+                            >Delete</span
+                          >
+                        </button>
+
+                        <button class="button-outlined-md">
+                          <img
+                            src="/src/assets/icons/edit-icon.svg"
+                            alt=""
+                          /><span class="ms-2 text-sm">Edit</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex fw-bold">Investment</div>
+                    </td>
+                    <td>
+                      <button class="button-outlined d-flex align-items-center">
+                        <img src="/src/assets/icons/time-fill.svg" alt="" />
+                        <span class="p-1 text-s text-sub-500">0/1</span>
+                      </button>
+                    </td>
+
+                    <td class="">
+                      <div class="d-flex gap-3">
+                        <button class="button-outlined-md">
+                          <img src="/src/assets/icons/trash.svg" alt="" /><span
+                            class="ms-2 text-sm"
+                            >Delete</span
+                          >
+                        </button>
+
+                        <button class="button-outlined-md">
+                          <img
+                            src="/src/assets/icons/edit-icon.svg"
+                            alt=""
+                          /><span class="ms-2 text-sm">Edit</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex fw-bold">Investment</div>
+                    </td>
+                    <td>
+                      <button class="button-outlined d-flex align-items-center">
+                        <img src="/src/assets/icons/time-fill.svg" alt="" />
+                        <span class="p-1 text-s text-sub-500">0/1</span>
+                      </button>
+                    </td>
+
+                    <td class="">
+                      <div class="d-flex gap-3">
+                        <button class="button-outlined-md">
+                          <img src="/src/assets/icons/trash.svg" alt="" /><span
+                            class="ms-2 text-sm"
+                            >Delete</span
+                          >
+                        </button>
+
+                        <button class="button-outlined-md">
+                          <img
+                            src="/src/assets/icons/edit-icon.svg"
+                            alt=""
+                          /><span class="ms-2 text-sm">Edit</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="w-full h-25 d-flex justify-content-between align-items-center mt-1"
+            >
+              <span class="text-sm text-sub-500">Page 1 of 1</span>
+              <button
+                class="button-outlined d-flex align-items-center"
+                style="padding: 5px 13px"
+              >
+                <span class="text-sm me-1">7/page </span
+                ><img src="/src/assets/icons/arrow-down.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- end table -->
+      </div>
+    </div>
+
+    <style>
+      thead th {
+        background-color: #f6f8fa;
+        &:first-child {
+          border-radius: 6px 0 0 6px;
+        }
+        &:last-child {
+          border-radius: 0 6px 6px 0;
+        }
+      }
+      table thead th {
+        height: 5px !important;
+        border-bottom: none !important;
+        font-weight: 400 !important;
+        font-size: 14px;
+      }
+      table tbody td {
+        padding: 14px 10px !important;
+      }
+      table tbody td {
+        border-bottom: none !important;
+      }
+
+      .form-search {
+        padding-left: 36px;
+        background-image: url("/src/assets/icons/search-icon.svg");
+        background-repeat: no-repeat;
+        background-position: 8px center;
+      }
+    </style>
+
+    <!-- bootstrap js -->
+    <script src="/src/scripts/components/siderbar.js"></script>
+    <script src="/src/scripts/components/dashboard-header.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("#example").DataTable({
+          paging: false,
+          ordering: true,
+          info: false,
+          lengthChange: false,
+
+          searching: false,
+          dom: '<"row view-filter"<"col-sm-12"<"pull-left"l><"pull-right"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
+        });
+      });
+    </script>
+  </body>
+</html>

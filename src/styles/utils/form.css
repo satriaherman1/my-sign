@@ -26,3 +26,9 @@
   background-position: 99% center;
 }
 
+.form-search {
+  padding-left: 35px !important;
+  background-image: url("/src/assets/icons/search-icon.svg");
+  background-position: 12px center;
+  background-repeat: no-repeat;
+}
