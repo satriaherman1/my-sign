@@ -19,6 +19,9 @@
 .bg-weak-100 {
   background-color: var(--weak-100);
 }
+.bg-soft-400 {
+  background-color: var(--soft-400);
+}
 
 .bg-blue-lighter {
   background-color: var(--blue-lighter);
