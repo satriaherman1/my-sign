@@ -109,6 +109,7 @@
                 <img src="/src/assets/icons/close.svg" width="20px" />
               </div>
             </div>
+            <div class="w-100 d-flex" id="progress-container"></div>
             <div id="progressbar1"></div>
           </div>
           <!-- end pdf upload progress -->
@@ -129,9 +130,39 @@
       </div>
       <!-- end Upload Document-->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
+    <script>
+      // Inisialisasi ProgressBar
+      var progressBar = new ProgressBar.Line("#progress-container", {
+        strokeWidth: 0.6,
+        easing: "easeInOut",
+        duration: 1400,
+        color: "#375DFB",
+        trailColor: "#eee",
+        trailWidth: 0.6,
+        trailRounded: true,
+        svgStyle: { width: "100%", height: "100%" },
+      });
+
+      // Fungsi untuk memperbarui nilai ProgressBar
+      function updateProgressBar(value) {
+        progressBar.animate(value); // value berkisar antara 0 dan 1
+      }
+
+      // Contoh penggunaan
+      updateProgressBar(0.5); // Memperbarui nilai ProgressBar menjadi 50%
+    </script>
 
     <style>
       /* start select doc page */
+
+      #progress-container {
+        width: 100%;
+        margin-top: 15px;
+      }
+      #progress-container svg {
+        border-radius: 20px;
+      }
       .sidebar-option.active {
         background-color: white;
         box-shadow: rgba(149, 157, 165, 0.078) 0px 8px 24px;
@@ -238,10 +269,6 @@
         width: 24px;
       }
     </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-    <script src="jquery.lineProgressbar.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
