@@ -82,19 +82,16 @@
   border-right: 1px solid var(--soft-200);
 }
 
-
 .button-transparent {
   background: none;
   border: none;
-
+}
 .button-soft-400 {
   color: white;
   border: 1px solid;
   border-color: #e2e4e9;
   border-radius: 8px;
   background-color: var(--soft-400);
-
-
 }
 
 .button-outlined-primary {
@@ -102,5 +99,4 @@
   border-radius: 8px;
   background-color: transparent;
   color: var(--primary-base);
-
 }
