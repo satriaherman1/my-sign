@@ -12,10 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <!-- dataTable css -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <!-- MAKE SURE THIS IS LOADED -->
-
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css" />
-
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
   </head>
   <body>
@@ -63,9 +60,9 @@
               <thead>
                 <tr class="text-sub-500">
                   <th>Nama</th>
-                  <th>Signers</th>
-                  <th>Created At</th>
-                  <th>Action</th>
+                  <th class="no-sort">Signers</th>
+                  <th class="no-sort">Created At</th>
+                  <th class="no-sort">Action</th>
                 </tr>
               </thead>
               <tbody class="text-sm">
@@ -806,13 +803,13 @@
     </div>
     <style>
       .dataTables_wrapper .dataTables_paginate .paginate_button {
-        margin-top: 20px !important;
+        margin-top: 9px !important;
         border-radius: 6px !important;
         background: transparent !important;
         padding: 4px 13px !important;
+        text-align: center !important;
       }
-
-
+ 
       .tabs {
         color: #868c98;
         display: flex;
@@ -882,7 +879,14 @@
             return "Page " + iStart + " of " + iEnd;
           },
           paging: true,
-          ordering: false,
+          ordering: true,
+          columnDefs: [
+            {
+              orderable: false,
+              targets: "no-sort",
+            },
+          ],
+
           info: true,
           lengthChange: false,
           pageLength: 6,
