@@ -8,3 +8,9 @@ window.addEventListener("load", function () {
   xhttp.open("GET", "/src/components/sidebar/index.html", false);
   xhttp.send();
 });
+
+function toggleNavbar() {
+  console.log("test");
+  const navbarList = document.querySelector(".navbar-list");
+  navbarList.classList.toggle("open");
+}
