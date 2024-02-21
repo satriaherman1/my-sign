@@ -4,3 +4,13 @@
   border-color: #e2e4e9;
   border-radius: 16px;
 }
+
+.border-rounded-lg {
+  border-radius: 10px !important;
+}
+
+.border-outline-rl {
+  border-right-style: solid;
+  border-color: grey;
+  border-left-style: solid;
+}
