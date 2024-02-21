@@ -30,3 +30,29 @@ body,
 html {
   overflow-x: hidden;
 }
+
+.basis-mobile-48 {
+  flex-basis: 48%;
+}
+
+.basis-mobile-100 {
+  flex-basis: 100%;
+}
+
+.vw-mobile-100 {
+  width: 100vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .basis-mobile-48 {
+    flex-basis: unset;
+  }
+
+  .basis-mobile-100 {
+    flex-basis: unset;
+  }
+
+  .vw-mobile-100 {
+    width: auto;
+  }
+}
