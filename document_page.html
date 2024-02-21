@@ -9,46 +9,32 @@
     <link rel="stylesheet" href="/src/styles/base.css" />
     <link rel="stylesheet" href="/src/styles/utils/form.css" />
 
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <!-- dataTable css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- MAKE SURE THIS IS LOADED -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css" />
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
   </head>
   <body>
     <div class="row">
       <div class="col-md-2 col-12">
         <div id="sidebar"></div>
       </div>
-      <div class="col-md vh-100 overflow-x-scroll">
+
+      <div class="col-md vh-100 overflow-y-scroll pb-3">
         <div id="dashboardHeader"></div>
         <!-- start upload document -->
-        <div
-          class="d-flex justify-content-between align-items-center w-full border-bottom"
-          style="height: 75px"
-        >
+        <div class="d-flex justify-content-between align-items-center w-full border-bottom" style="height: 75px">
           <div class="d-flex flex-column h-auto">
             <span class="text-md fw-medium text-black">Your Documents</span>
             <span class="text-sub-500 text-sm">Display All the document</span>
           </div>
           <div class="d-flex">
-            <button
-              class="button button-primary-base background-primary-base d-flex align-items-center gap-2"
-              style="padding: 7px 15px 7px 10px"
-            >
-              <img src="/src/assets/icons/upload-icon.svg" alt="" /><span
-                class="text-sm"
-                >Upload Document</span
-              >
+            <button class="button button-primary-base background-primary-base d-flex align-items-center gap-2" style="padding: 7px 15px 7px 10px">
+              <img src="/src/assets/icons/upload-icon.svg" alt="" /><span class="text-sm">Upload Document</span>
             </button>
           </div>
         </div>
@@ -57,10 +43,7 @@
         <!-- start table -->
         <div class="d-flex mt-3">
           <div class="flex-fill overview d-flex flex-column" style="padding: 0">
-            <div
-              class="d-flex align-items-center justify-content-between align-items-center"
-              style="height: 50px"
-            >
+            <div class="d-flex align-items-center justify-content-between align-items-center" style="height: 50px">
               <div class="menu">
                 <div class="tabs">
                   <input type="radio" name="tabs" id="tab1" checked />
@@ -72,25 +55,11 @@
                   <span class="selector"></span>
                 </div>
               </div>
-              <div
-                class="form-outline d-flex align-items-center"
-                data-mdb-input-init
-                style="width: 338px"
-              >
-                <input
-                  type="search"
-                  id=""
-                  class="form-control form-search"
-                  placeholder="      Search for documents"
-                  aria-label="Search"
-                />
+              <div class="form-outline d-flex align-items-center" data-mdb-input-init style="width: 338px">
+                <input type="search" id="" class="form-control form-search" placeholder="Search" aria-label="Search" />
               </div>
             </div>
-            <table
-              id="example"
-              class="row-border mt-3 text-sub-500"
-              style="width: 100%"
-            >
+            <table id="example" class="row-border mt-3 text-sub-500" style="width: 100%">
               <thead>
                 <tr class="text-sub-500">
                   <th>Nama</th>
@@ -105,12 +74,8 @@
                     <div class="d-flex">
                       <img src="/src/assets/icons/File-format.svg" alt="" />
                       <div class="ms-3 d-flex flex-column">
-                        <span class="text-sm fw-medium"
-                          >Employee Contact with long name.pdf</span
-                        >
-                        <span class="text-soft-400" style="font-size: 11px"
-                          >1.2 mb</span
-                        >
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
                       </div>
                     </div>
                   </td>
@@ -123,30 +88,10 @@
                   <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
                   <td class="">
                     <div class="d-flex gap-3">
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/warn-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Audit Trail</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img src="/src/assets/icons/eye-icon.svg" alt="" /><span
-                          class="ms-2 text-sm"
-                          >Preview</span
-                        >
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/archive-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Download</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/edit-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Edit</span>
-                      </button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
                     </div>
                   </td>
                 </tr>
@@ -155,12 +100,8 @@
                     <div class="d-flex">
                       <img src="/src/assets/icons/File-format.svg" alt="" />
                       <div class="ms-3 d-flex flex-column">
-                        <span class="text-sm fw-medium"
-                          >Employee Contact with long name.pdf</span
-                        >
-                        <span class="text-soft-400" style="font-size: 11px"
-                          >1.2 mb</span
-                        >
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
                       </div>
                     </div>
                   </td>
@@ -173,30 +114,10 @@
                   <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
                   <td class="">
                     <div class="d-flex gap-3">
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/warn-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Audit Trail</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img src="/src/assets/icons/eye-icon.svg" alt="" /><span
-                          class="ms-2 text-sm"
-                          >Preview</span
-                        >
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/archive-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Download</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/edit-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Edit</span>
-                      </button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
                     </div>
                   </td>
                 </tr>
@@ -205,162 +126,8 @@
                     <div class="d-flex">
                       <img src="/src/assets/icons/File-format.svg" alt="" />
                       <div class="ms-3 d-flex flex-column">
-                        <span class="text-sm fw-medium"
-                          >Employee Contact with long name.pdf</span
-                        >
-                        <span class="text-soft-400" style="font-size: 11px"
-                          >1.2 mb</span
-                        >
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <button class="button-outlined d-flex align-items-center">
-                      <img src="/src/assets/icons/check-mark.svg" alt="" />
-                      <span class="p-1 text-s text-sub-500">1/1</span>
-                    </button>
-                  </td>
-                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
-                  <td class="">
-                    <div class="d-flex gap-3">
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/warn-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Audit Trail</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img src="/src/assets/icons/eye-icon.svg" alt="" /><span
-                          class="ms-2 text-sm"
-                          >Preview</span
-                        >
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/archive-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Download</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/edit-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Edit</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <img src="/src/assets/icons/File-format.svg" alt="" />
-                      <div class="ms-3 d-flex flex-column">
-                        <span class="text-sm fw-medium"
-                          >Employee Contact with long name.pdf</span
-                        >
-                        <span class="text-soft-400" style="font-size: 11px"
-                          >1.2 mb</span
-                        >
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <button class="button-outlined d-flex align-items-center">
-                      <img src="/src/assets/icons/check-mark.svg" alt="" />
-                      <span class="p-1 text-s text-sub-500">1/1</span>
-                    </button>
-                  </td>
-                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
-                  <td class="">
-                    <div class="d-flex gap-3">
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/warn-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Audit Trail</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img src="/src/assets/icons/eye-icon.svg" alt="" /><span
-                          class="ms-2 text-sm"
-                          >Preview</span
-                        >
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/archive-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Download</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/edit-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Edit</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <img src="/src/assets/icons/File-format.svg" alt="" />
-                      <div class="ms-3 d-flex flex-column">
-                        <span class="text-sm fw-medium"
-                          >Employee Contact with long name.pdf</span
-                        >
-                        <span class="text-soft-400" style="font-size: 11px"
-                          >1.2 mb</span
-                        >
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <button class="button-outlined d-flex align-items-center">
-                      <img src="/src/assets/icons/check-mark.svg" alt="" />
-                      <span class="p-1 text-s text-sub-500">1/1</span>
-                    </button>
-                  </td>
-                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
-                  <td class="">
-                    <div class="d-flex gap-3">
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/warn-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Audit Trail</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img src="/src/assets/icons/eye-icon.svg" alt="" /><span
-                          class="ms-2 text-sm"
-                          >Preview</span
-                        >
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/archive-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Download</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/edit-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Edit</span>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="d-flex">
-                      <img src="/src/assets/icons/File-format.svg" alt="" />
-                      <div class="ms-3 d-flex flex-column">
-                        <span class="text-sm fw-medium"
-                          >Employee Contact with long name.pdf</span
-                        >
-                        <span class="text-soft-400" style="font-size: 11px"
-                          >1.2 mb</span
-                        >
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
                       </div>
                     </div>
                   </td>
@@ -373,95 +140,737 @@
                   <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
                   <td class="">
                     <div class="d-flex gap-3">
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/warn-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Audit Trail</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img src="/src/assets/icons/eye-icon.svg" alt="" /><span
-                          class="ms-2 text-sm"
-                          >Preview</span
-                        >
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/archive-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Download</span>
-                      </button>
-                      <button class="button-outlined-md">
-                        <img
-                          src="/src/assets/icons/edit-icon.svg"
-                          alt=""
-                        /><span class="ms-2 text-sm">Edit</span>
-                      </button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/check-mark.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">1/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/check-mark.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">1/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/check-mark.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">1/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="d-flex">
+                      <img src="/src/assets/icons/File-format.svg" alt="" />
+                      <div class="ms-3 d-flex flex-column">
+                        <span class="text-sm fw-medium">Employee Contact with long name.pdf</span>
+                        <span class="text-soft-400" style="font-size: 11px">1.2 mb</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <button class="button-outlined d-flex align-items-center">
+                      <img src="/src/assets/icons/time-fill.svg" alt="" />
+                      <span class="p-1 text-s text-sub-500">0/1</span>
+                    </button>
+                  </td>
+                  <td><span class="text-sub-500">15/01/23 • 12:00 pm</span></td>
+                  <td class="">
+                    <div class="d-flex gap-3">
+                      <button class="button-outlined-md"><img src="/src/assets/icons/warn-icon.svg" alt="" /><span class="ms-2 text-sm">Audit Trail</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/archive-icon.svg" alt="" /><span class="ms-2 text-sm">Download</span></button>
+                      <button class="button-outlined-md"><img src="/src/assets/icons/edit-icon.svg" alt="" /><span class="ms-2 text-sm">Edit</span></button>
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
-            <div
-              class="w-full h-25 d-flex justify-content-between align-items-center mt-1"
-            >
-              <span class="text-sm text-sub-500">Page 1 of 1</span>
-              <button
-                class="button-outlined d-flex align-items-center"
-                style="padding: 5px 13px"
-              >
-                <span class="text-sm me-1">7/page </span
-                ><img src="/src/assets/icons/arrow-down.svg" alt="" />
-              </button>
-            </div>
           </div>
         </div>
         <!-- end table -->
       </div>
     </div>
     <style>
-      input,
-      input::-webkit-input-placeholder {
-        font-size: 14px;
+      .dataTables_wrapper .dataTables_paginate .paginate_button {
+        margin-top: 20px !important;
+        border-radius: 6px !important;
+        background: transparent !important;
+        padding: 4px 13px !important;
       }
-      thead th {
+
+
+      .tabs {
+        color: #868c98;
+        display: flex;
+        position: relative;
         background-color: #f6f8fa;
-        &:first-child {
-          border-radius: 6px 0 0 6px;
-        }
-        &:last-child {
-          border-radius: 0 6px 6px 0;
-        }
+        padding: 5px 6px;
+        border-radius: 15px;
       }
-      table thead th {
-        height: 5px !important;
-        border-bottom: none !important;
-        font-weight: 400 !important;
+
+      .tabs > * {
+        z-index: 2;
+      }
+
+      .tab {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 80px;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: color 0.5s, text-shadow 0.5s, font-size 0.5s;
+      }
+
+      input[type="radio"]:checked + label {
+        color: black;
+
         font-size: 14px;
       }
-      table tbody td {
-        padding: 14px 10px !important;
-      }
-      table tbody td {
-        border-bottom: none !important;
+      input[type="radio"] {
+        position: absolute;
+        opacity: 0;
       }
 
-      .text-link {
-        margin: 6px 0;
-        text-decoration: none;
-        color: black;
-        font-weight: 500;
-      }
-      .active {
-        opacity: 1 !important;
+      .selector {
+        position: absolute;
+        display: flex;
+        height: 30px;
+        width: 80px;
+        background-color: white;
+        z-index: 1;
+        border-radius: 10px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
       }
 
-      .outlined-close-button {
-        border-radius: 6px;
-        background-color: transparent;
-        border: 2px solid #e2e4e9;
-        height: 24px;
-        width: 24px;
+      input[id="tab1"]:checked ~ .selector {
+        transform: translateX(0);
+      }
+
+      input[id="tab2"]:checked ~ .selector {
+        transform: translateX(100%);
+      }
+
+      input[id="tab3"]:checked ~ .selector {
+        transform: translateX(200%);
       }
     </style>
     <script src="/src/scripts/components/siderbar.js"></script>
@@ -469,21 +878,24 @@
     <script>
       $(document).ready(function () {
         $("#example").DataTable({
-          paging: false,
+          fnInfoCallback: function (oSettings, iStart, iEnd, iMax, iTotal, sPre) {
+            return "Page " + iStart + " of " + iEnd;
+          },
+          paging: true,
           ordering: false,
-          info: false,
+          info: true,
           lengthChange: false,
+          pageLength: 6,
 
           searching: false,
-          dom: '<"row view-filter"<"col-sm-12"<"pull-left"l><"pull-right"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
+          // dom: '<"bottom"ilp>',
+          initComplete: function () {
+            $(".dataTables_paginate").css("text-align", "center");
+          },
         });
       });
     </script>
-    <script src="/src/scripts/utils/circular-chart.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
