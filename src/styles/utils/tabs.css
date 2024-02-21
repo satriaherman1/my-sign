@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   height: 30px;
-  width: 80px;
+  width: 20%;
   font-size: 14px;
   font-weight: 500;
   border-radius: 10px;
@@ -38,7 +38,7 @@ input[type="radio"] {
   position: absolute;
   display: flex;
   height: 30px;
-  width: 80px;
+  width: 20%;
   background-color: white;
   z-index: 1;
   border-radius: 10px;
@@ -56,4 +56,10 @@ input[id="tab2"]:checked ~ .selector {
 
 input[id="tab3"]:checked ~ .selector {
   transform: translateX(200%);
+}
+input[id="tab4"]:checked ~ .selector {
+  transform: translateX(300%);
+}
+input[id="tab5"]:checked ~ .selector {
+  transform: translateX(400%);
 }

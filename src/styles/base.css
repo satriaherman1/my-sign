@@ -3,6 +3,7 @@
 @import url("utils/button.css");
 @import url("utils/chart.css");
 @import url("utils/tabs.css");
+@import url("utils/outline.css");
 
 .h-full {
   height: 100vh;
