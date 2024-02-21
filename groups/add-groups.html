@@ -36,19 +36,26 @@
             >
           </div>
           <div class="d-flex gap-2">
-            <button class="button button-sm button-outlined">
+            <button
+              class="button button-sm button-outlined"
+              onclick="window.location.href = '/groups/categories.html'"
+            >
               <img src="/src/assets/icons/list-unordered.svg" />
               <span class="ms-2">Categories</span>
             </button>
-            <button class="button button-sm button-outlined">
+            <button
+              class="button button-sm button-outlined"
+              onclick="window.location.href = '/groups/temporary-groups.html'"
+            >
               <img src="/src/assets/icons/user-voice-line.svg" />
               <span class="ms-2">Temporary groups</span>
             </button>
             <button
               class="button button-primary-base background-primary-base d-flex align-items-center gap-2"
               style="padding: 7px 15px 7px 10px"
+              onclick="window.location.href = '/groups/add-groups.html'"
             >
-              <img src="/src/assets/icons/upload-icon.svg" alt="" /><span
+              <img src="/src/assets/icons/add-line-white.svg" alt="" /><span
                 class="text-sm"
                 >Add Group</span
               >
@@ -198,6 +205,49 @@
       </div>
     </div>
 
+    <!-- loading -->
+    <div class="loading-container d-none">
+      <div class="loading-box">
+        <img src="/src/assets/icons/spinner.svg" />
+      </div>
+    </div>
+    <!-- end loading -->
+
+    <style>
+      .loading-container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #00000030;
+
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loading-container > .loading-box {
+        padding: 10px;
+        border-radius: 12px;
+        background-color: white;
+        width: fit-content;
+      }
+
+      .loading-container > .loading-box > img {
+        animation: spin 2s infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
     <!-- bootstrap js -->
     <script src="/src/scripts/components/siderbar.js"></script>
     <script src="/src/scripts/components/dashboard-header.js"></script>
@@ -206,5 +256,19 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function handleAddGroups() {
+        event.preventDefault();
+        const loadingComp = document.querySelector(".loading-container");
+        loadingComp.classList.remove("d-none");
+        loadingComp.classList.add("d-flex");
+
+        const removeLoadingTimeOut = setTimeout(() => {
+          loadingComp.classList.remove("d-flex");
+          loadingComp.classList.add("d-none");
+          clearTimeout(removeLoadingTimeOut);
+        }, 2000);
+      }
+    </script>
   </body>
 </html>

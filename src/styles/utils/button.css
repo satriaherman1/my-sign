@@ -81,3 +81,8 @@
 .border-r {
   border-right: 1px solid var(--soft-200);
 }
+
+.button-transparent {
+  background: none;
+  border: none;
+}
