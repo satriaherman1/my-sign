@@ -101,3 +101,20 @@
   background-color: transparent;
   color: var(--primary-base);
 }
+
+
+ .dataTables_wrapper .dataTables_paginate .paginate_button {
+        margin-top: 9px !important;
+        border-radius: 6px !important;
+        background: transparent !important;
+        /* padding: 4px 13px !important; */
+        text-align: center !important;
+      }
+      .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        margin-top: 9px !important;
+        border-radius: 6px !important;
+        background: transparent !important;
+        /* padding: 4px 13px !important; */
+        text-align: center !important;
+        color: black !important;
+      }
