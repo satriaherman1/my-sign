@@ -43,11 +43,7 @@ html {
   width: 100vw;
 }
 
-.w-75 {
-  width: 75% !important;
-}
-
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .basis-mobile-48 {
     flex-basis: unset;
   }

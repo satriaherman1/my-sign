@@ -22,3 +22,30 @@
   font-weight: 600;
   color: black;
 }
+
+@media all and (min-width: 360px) and (max-width: 1024px) {
+.circular-progress {
+  position: relative;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 74px;
+  width: 74px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.circular-progress-value {
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+}
+}
