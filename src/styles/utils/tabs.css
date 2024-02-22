@@ -1,3 +1,29 @@
+.tabs {
+  color: #868c98;
+  display: flex;
+  position: relative;
+  background-color: #f6f8fa;
+  padding: 5px 7px;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.tabs > * {
+  z-index: 2;
+}
+
+.tab {
+  flex: 1; /* Make each tab equally share the available space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.5s, text-shadow 0.5s, font-size 0.5s;
+}
 input[type="radio"]:checked + label {
   color: black;
 
@@ -11,14 +37,13 @@ input[type="radio"] {
 .selector {
   position: absolute;
   display: flex;
-  height: 30px;
-  width: 20%;
+  height: 38px;
   background-color: white;
   z-index: 1;
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  width: 20%; /* Set initial width (adjust as needed) */
 }
 
 input[id="tab1"]:checked ~ .selector {
@@ -36,5 +61,32 @@ input[id="tab4"]:checked ~ .selector {
   transform: translateX(300%);
 }
 input[id="tab5"]:checked ~ .selector {
-  transform: translateX(400%);
+  transform: translateX(394%);
+}
+
+@media all and (min-width: 360px) and (max-width: 760px) {
+  .tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    font-size: 8px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.5s, text-shadow 0.5s, font-size 0.5s;
+  }
+
+  input[type="radio"]:checked + label {
+    color: black;
+
+    font-size: 8px;
+  }
+  input[id="tab4"]:checked ~ .selector {
+  transform: translateX(298%);
+}
+  input[id="tab5"]:checked ~ .selector {
+    transform: translateX(388%);
+  }
 }
