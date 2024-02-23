@@ -56,3 +56,7 @@ html {
     width: auto;
   }
 }
+
+.overflow-x-scroll {
+  scrollbar-width: none;
+}
