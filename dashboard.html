@@ -22,16 +22,22 @@
         <div id="sidebar"></div>
       </div>
 
-      <div class="col-lg pb-3 overflow-y-scroll">
+      <div class="col-lg pb-3 ms-md-3 ms-sm-0 overflow-y-scroll">
         <div id="dashboardHeader" class="px-3"></div>
+        <div class="col-12 px-3 m-0 w-100 my-3 d-md-none d-block">
+          <button class="button button-primary d-flex justify-content-center align-items-center w-100" style="border-radius: 10px">
+            <img src="/src/assets/icons/edit-2-line.svg" alt="" /><span class="text-sm ms-2">Sign Document</span>
+          </button>
+        </div>
+
         <!-- start overview -->
 
-        <div class="mt-sm-2 mt-1 container-fluid row p-0 m-0" style="width: 100%">
+        <div class="mt-sm-2 mt-3 container-fluid row p-0 m-0" style="width: 100%">
           <div class="col-xxl-10 col-lg-8 col-md-7 px-md-0 px-3" style="padding: 0">
             <div class="overview button-outlined-rounded-lg h-100" style="padding: 10px 10px">
               <div class="gap-2 d-flex align-items-center mx-2 mt-2">
                 <img src="/src/assets/icons/overview-file.svg" width="18px" alt="" />
-                <span class="text-md text-black fs-semibold">Overview</span>
+                <span class="text-md text-black fw-medium">Overview</span>
               </div>
               <hr class="mt-3" />
               <div class="row gap-3 align-items-center justify-content-center mx-3">
@@ -87,7 +93,7 @@
             <div class="overview button-outlined-rounded-lg h-100" style="padding: 10px 10px">
               <div class="gap-2 d-flex align-items-center mx-2 mt-2">
                 <img src="/src/assets/icons/overview-file.svg" width="18px" alt="" />
-                <span class="text-md text-black fs-semibold">Storage</span>
+                <span class="text-md text-black fw-medium">Storage</span>
               </div>
               <hr class="mt-3" />
               <div class="my-sm-0 my-4 d-flex flex-column justify-content-center align-items-center">
@@ -104,24 +110,25 @@
 
         <!-- start table -->
         <div class="d-flex mt-4 px-sm-0 px-3">
-          <div class="flex-fill overview button-outlined-rounded-lg d-flex flex-column" style="padding: 15px 25px">
-            <div class="row align-items-center justify-content-between" style="height: 30px">
-              <div class="col-sm-6 col-6 d-flex align-items-center gap-2">
+          <div class="flex-fill overflow-x-scroll overview button-outlined-rounded-lg d-flex flex-column" style="padding: 15px 21px">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-sm-6 my-sm-0 my-2 col-12 d-flex align-items-center gap-2">
                 <img src="/src/assets/icons/overview-file.svg" alt="" />
-                <span class="text-md text-black fs-semibold">Documents</span>
+                <span class="text-md text-black fw-medium">Documents</span>
               </div>
 
-              <div class="col-sm-3 col-6 form-outline d-flex align-items-center" data-mdb-input-init>
+              <div class="col-sm-3 mt-sm-0 mt-3 form-outline d-flex align-items-center" data-mdb-input-init>
                 <input type="search" id="" class="form-control form-search p-sm-1 p-1" placeholder="Search for documents..." aria-label="Search" />
               </div>
             </div>
-            <table id="example" class="row-border mt-4 text-sub-500" style="width: 100%">
+
+            <table id="example" class="text-nowrap row-border mt-sm-4 mt-2 text-sub-500" style="width: 100%">
               <thead>
-                <tr class="text-sub-500">
-                  <th>Nama</th>
-                  <th>Created At</th>
-                  <th class="">Signers</th>
-                  <th class="d-lg-table-cell d-none">Action</th>
+                <tr class="text-sub-500 t">
+                  <th class="fw-medium">Nama</th>
+                  <th class="fw-medium">Created At</th>
+                  <th class="fw-medium">Signers</th>
+                  <th class="fw-medium">Action</th>
                 </tr>
               </thead>
               <tbody class="text-sm">
@@ -144,7 +151,7 @@
                       <span class="p-1 text-s text-sub-500">0/1</span>
                     </button>
                   </td>
-                  <td class="d-lg-block d-none">
+                  <td class="">
                     <div class="d-flex gap-3">
                       <button class="btn-lg my-3 justify-content-center align-items-center button-outlined py-2" style="white-space: nowrap">
                         <img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span>
@@ -179,7 +186,7 @@
                       <span class="p-1 text-s text-sub-500">1/1</span>
                     </button>
                   </td>
-                  <td class="d-lg-block d-none">
+                  <td class="">
                     <div class="d-flex gap-3">
                       <button class="btn-lg my-3 justify-content-center align-items-center button-outlined py-2" style="white-space: nowrap">
                         <img src="/src/assets/icons/eye-icon.svg" alt="" /><span class="ms-2 text-sm">Preview</span>
@@ -201,68 +208,6 @@
         <!-- end table -->
       </div>
     </div>
-
-    <style>
-      .dataTables_wrapper .dataTables_paginate .paginate_button {
-        margin-top: 9px !important;
-        border-radius: 6px !important;
-        background: transparent !important;
-        /* padding: 4px 13px !important; */
-        text-align: center !important;
-      }
-      .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-        margin-top: 9px !important;
-        border-radius: 6px !important;
-        background: transparent !important;
-        /* padding: 4px 13px !important; */
-        text-align: center !important;
-        color: black !important;
-      }
-
-      input,
-      input::-webkit-input-placeholder {
-        font-size: 14px;
-      }
-      thead th {
-        background-color: #f6f8fa;
-        &:first-child {
-          border-radius: 6px 0 0 6px;
-        }
-        &:last-child {
-          border-radius: 0 6px 6px 0;
-        }
-      }
-      table thead th {
-        height: 5px !important;
-        border-bottom: none !important;
-        font-weight: 400 !important;
-        font-size: 14px;
-      }
-      table tbody td {
-        padding: 14px 10px !important;
-      }
-      table tbody td {
-        border-bottom: none !important;
-      }
-
-      .text-link {
-        margin: 6px 0;
-        text-decoration: none;
-        color: black;
-        font-weight: 500;
-      }
-      .active {
-        opacity: 1 !important;
-      }
-
-      .outlined-close-button {
-        border-radius: 6px;
-        background-color: transparent;
-        border: 2px solid #e2e4e9;
-        height: 24px;
-        width: 24px;
-      }
-    </style>
 
     <script src="/src/scripts/components/siderbar.js"></script>
     <script src="/src/scripts/components/dashboard-header.js"></script>
