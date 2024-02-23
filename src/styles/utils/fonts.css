@@ -55,4 +55,7 @@
   .overview-img {
     height: 50px;
   }
+  .fw-semibold {
+    font-weight: 500 !important;
+  }
 }
