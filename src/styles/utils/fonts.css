@@ -44,3 +44,18 @@
 .fs-11 {
   font-size: 11px;
 }
+
+.text-placeholder-md::-webkit-input-placeholder {
+  font-size: 14px;
+}
+@media all and (min-width: 360px) and (max-width: 760px) {
+  .fs-11 {
+    font-size: 13px;
+  }
+  .overview-img {
+    height: 50px;
+  }
+  .fw-semibold {
+    font-weight: 500 !important;
+  }
+}
