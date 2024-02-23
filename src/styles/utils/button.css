@@ -5,6 +5,7 @@
   border: none;
   cursor: pointer;
   transition: 0.3s;
+  width: fit-content;
 }
 
 .button.button-sm {
@@ -121,12 +122,10 @@
 @media all and (min-width: 360px) and (max-width: 1024px) {
   .border-r {
     border-right: 0px solid var(--soft-200);
-
   }
 }
 @media all and (min-width: 360px) and (max-width: 760px) {
   .border-r {
-       border-bottom:1px solid var(--soft-200);
-
+    border-bottom: 1px solid var(--soft-200);
   }
 }
