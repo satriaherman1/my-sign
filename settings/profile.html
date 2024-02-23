@@ -25,13 +25,14 @@
         flex-wrap: wrap;
       }
 
-      .profile-form > div:nth-child(n + 1):nth-child(-n + 4) {
-        width: 100%;
-        flex-basis: 48%;
-      }
-
       .profile-form > div:nth-child(n + 5) {
         width: 100%;
+      }
+      @media screen and(min-width: 1024px) {
+        .profile-form > div:nth-child(n + 1):nth-child(-n + 4) {
+          width: 100%;
+          flex-basis: 48%;
+        }
       }
     </style>
   </head>
@@ -43,9 +44,9 @@
       <div class="col-md vh-100 overflow-y-scroll">
         <div id="dashboardHeader" class="px-3"></div>
 
-        <div class="row">
+        <div class="row p-3">
           <div class="col-md-3">
-            <div class="mt-4 border-r pe-3">
+            <div class="mt-lg-4 border-lg-r pe-3">
               <h4 class="text-lg font-bold mb-0">Settings</h4>
               <span class="text-sm text-sub-500"
                 >Choose between categories</span
@@ -53,7 +54,7 @@
 
               <hr />
 
-              <div class="d-flex flex-column gap-2">
+              <div class="d-flex flex-column gap-2 d-none d-lg-flex">
                 <a
                   href="/settings/general.html"
                   class="w-100 px-3 py-2 menu-active"
@@ -96,7 +97,7 @@
           </div>
 
           <div class="col-md">
-            <div class="p-4">
+            <div class="p-lg-4">
               <div class="d-flex gap-3 align-items-center">
                 <img src="/src/assets/img/Avatar.svg" />
                 <div>
@@ -119,7 +120,7 @@
               <hr />
 
               <form action="" class="profile-form">
-                <div class="mt-3 fw-semibold">
+                <div class="mt-3 fw-semibold w-100">
                   <label for="arabicName"
                     >Arabic Name <span class="txt-primary">*</span></label
                   >
@@ -129,7 +130,7 @@
                     placeholder="Please enter arabicName"
                   />
                 </div>
-                <div class="mt-3 fw-semibold">
+                <div class="mt-3 fw-semibold w-100">
                   <label for="englishName"
                     >English Name <span class="txt-primary">*</span></label
                   >
@@ -139,7 +140,7 @@
                     placeholder="Please enter english name"
                   />
                 </div>
-                <div class="mt-3 fw-semibold">
+                <div class="mt-3 fw-semibold w-100">
                   <label for="englishName"
                     >National Id <span class="txt-primary">*</span></label
                   >
@@ -227,6 +228,19 @@
                 </div>
               </form>
             </div>
+          </div>
+
+          <div
+            class="p-3 mt-4 d-flex align-items-center justify-content-between w-100 d-lg-none"
+          >
+            <span>&copy; 2024 MySign</span>
+            <button
+              class="button-outlined d-flex gap-2"
+              style="padding: 6px 10px"
+            >
+              <span class="text-sm">English</span>
+              <img src="/src/assets/icons/arrow-down.svg" alt="" />
+            </button>
           </div>
         </div>
       </div>
