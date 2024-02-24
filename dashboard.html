@@ -162,7 +162,7 @@
                 <div class="circular-progress">
                   <span class="circular-progress-value">0%</span>
                 </div>
-                <span class="text-sm mt-3 fw-medium text-black"
+                <span class="text-xs mt-3 fw-medium text-black"
                   >852 MB from 100MB</span
                 >
                 <a class=" " style="font-size: 12px">Upgrade Storage</a>
@@ -206,8 +206,8 @@
               style="width: 100%"
             >
               <thead>
-                <tr class="text-sub-500 t">
-                  <th class="fw-medium">Nama</th>
+                <tr class="text-sub-500 t py-2">
+                  <th class="fw-medium">Name</th>
                   <th class="fw-medium">Created At</th>
                   <th class="fw-medium">Signers</th>
                   <th class="fw-medium">Action</th>
@@ -350,6 +350,18 @@
         <!-- end table -->
       </div>
     </div>
+
+    <style>
+      thead tr {
+        background-color: var(--weak-100);
+        border-radius: 20px;
+        border-bottom: unset !important;
+      }
+
+      #example thead tr th {
+        border: unset;
+      }
+    </style>
 
     <script src="/src/scripts/components/siderbar.js"></script>
     <script src="/src/scripts/components/dashboard-header.js"></script>
