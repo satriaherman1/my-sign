@@ -179,13 +179,19 @@
       .button-area {
         position: fixed;
         bottom: 0;
-        padding: 20px;
+        padding: 20px 30px;
         margin-top: 40px;
         z-index: 10;
         background: white;
         width: 100%;
-        left: 0;
+        right: 1vw;
         justify-content: end;
+      }
+
+      @media screen and (min-width: 1024px) {
+        .button-area {
+          right: 3vw;
+        }
       }
     </style>
 
