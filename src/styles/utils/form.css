@@ -28,11 +28,11 @@
 
 .form-search {
   padding-left: 35px !important;
-  background-image: url("/src/assets/icons/search-icon.svg");
+  background-image: url("/src/assets/icons/search-2-line.svg");
   background-position: 12px center;
   background-repeat: no-repeat;
 }
 
-::placeholder {
+.form-search::placeholder {
   color: var(--soft-400);
 }

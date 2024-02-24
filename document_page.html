@@ -34,7 +34,9 @@
         <div id="sidebar"></div>
       </div>
 
-      <div class="col-md overflow-y-scroll mt-sm-0 mt-3 ms-sm-0 ms-3">
+      <div
+        class="col-md overflow-y-scroll mt-sm-0 mt-3 ms-sm-0 ms-3 overflow-y-scroll vh-100 p-4"
+      >
         <div id="dashboardHeader"></div>
         <!-- start upload document -->
         <div
@@ -83,7 +85,7 @@
                 <input
                   type="search"
                   id=""
-                  class="form-control form-search p-2"
+                  class="form-control form-search"
                   placeholder="Search"
                   aria-label="Search"
                 />
@@ -97,11 +99,11 @@
                 style="width: 100%"
               >
                 <thead>
-                  <tr class="text-sub-500">
-                    <th>Nama</th>
-                    <th class="no-sort">Signers</th>
-                    <th class="no-sort">Created At</th>
-                    <th class="no-sort">Action</th>
+                  <tr class="text-sub-500 fw-normal" style="font-weight: 500">
+                    <td>Group Name</td>
+                    <td class="no-sort">Signers</td>
+                    <td class="no-sort">Created At</td>
+                    <td class="no-sort">Action</td>
                   </tr>
                 </thead>
                 <tbody class="text-sm">
@@ -1572,6 +1574,16 @@
     <style>
       #example tbody tr td {
         padding: 22px 10px;
+      }
+
+      thead tr {
+        background-color: var(--weak-100);
+        border-radius: 20px;
+        border-bottom: unset !important;
+      }
+      thead tr td {
+        /* background-color: var(--weak-100); */
+        border-bottom: unset !important;
       }
 
       .tabs {
